@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Room Booking Form</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #fff;
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .card {
+      width: 480px;
+      border: 4px solid #111;
+      padding: 18px 26px 26px 26px;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+    }
+
+    form {
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      column-gap: 12px;
+      row-gap: 12px;
+      align-items: center;
+    }
+
+    label {
+      text-align: right;
+      font-size: 14px;
+      padding-right: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 6px 8px;
+      box-sizing: border-box;
+      border: 1px solid #777;
+      font-size: 13px;
+      font-family: inherit;
+    }
+
+    textarea {
+      height: 90px;
+      resize: vertical;
+    }
+
+    .full-row {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .buttons {
+      display: inline-flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 6px 14px;
+      border: 1px solid #666;
+      background: #eee;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    /* small visual tuning to match screenshot look */
+    .note {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Hotel Room Booking Form">
+    <h1 class="title">Hotel Room Booking Form</h1>
+
+    <form action="#" method="post" onsubmit="alert('Form submitted (demo)'); return false;">
+      <div class="grid">
+        <label for="fullname">Full Name:</label>
+        <input id="fullname" name="fullname" type="text" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" pattern="[\d\+\-\s]+" >
+
+        <label for="checkin">Check-in Date:</label>
+        <input id="checkin" name="checkin" type="date" required>
+
+        <label for="checkout">Check-out Date:</label>
+        <input id="checkout" name="checkout" type="date" required>
+
+        <label for="roomtype">Room Type:</label>
+        <select id="roomtype" name="roomtype" required>
+          <option value="single">Single Room</option>
+          <option value="double">Double Room</option>
+          <option value="suite">Suite</option>
+        </select>
+
+        <label for="guests">Number of Guests:</label>
+        <input id="guests" name="guests" type="number" min="1" max="10" placeholder="1">
+
+        <div class="full-row">
+          <label for="requests" style="display:block; text-align:center; margin-bottom:6px;">Special Requests:</label>
+          <textarea id="requests" name="requests" placeholder="Any special requests (e.g., late arrival, extra bed)"></textarea>
+        </div>
+
+        <div class="full-row">
+          <div class="buttons" role="group" aria-label="Form actions">
+            <input type="submit" value="Book Now">
+            <input type="reset" value="Reset Form">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>==
