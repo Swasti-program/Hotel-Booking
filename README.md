@@ -37,7 +37,8 @@ Hotel-Booking/
 
 ## 📸 Preview
 
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/d115212d-e277-4c38-9d03-6437feb41c77" />
+<img width="749" height="425" alt="image" src="https://github.com/user-attachments/assets/d48d1441-4b30-45a0-82bf-6a7e1af93d7d" />
+
 
 
 ## 👩‍💻 Author
